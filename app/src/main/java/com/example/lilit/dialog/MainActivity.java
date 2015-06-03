@@ -53,7 +53,7 @@ public class MainActivity extends ActionBarActivity {
             case R.id.btnHoriz:
                 pd = new ProgressDialog(this);
                 pd.setTitle("Title");
-                pd.setContentView(R.layout.dialog_layout);
+
                 pd.setMessage("Message");
                 // меняем стиль на индикатор
                 pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -62,6 +62,7 @@ public class MainActivity extends ActionBarActivity {
                 // включаем анимацию ожидания
                 pd.setIndeterminate(true);
                 pd.show();
+                pd.setContentView(R.layout.dialog_layout);
                 h = new Handler() {
                     public void handleMessage(Message msg) {
                         // выключаем анимацию ожидания
